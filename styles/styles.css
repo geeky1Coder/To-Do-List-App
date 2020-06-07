@@ -16,7 +16,7 @@ body{
   font-family: 'Kanit', sans-serif;;
   font-size: 1.6em;
   font-weight: bold;
- 
+  color: white;
 }
 #name span{
   border-bottom: 1px solid #3499FF;
@@ -64,7 +64,7 @@ body{
   align-items: center;
   flex-direction: column;
   color:white;
- font-family: 'Kanit', sans-serif; ;
+   font-family: 'Kanit', sans-serif; ;
   font-size: 1.2em;
   transition:ease-in-out;
 }
@@ -119,3 +119,56 @@ body{
   background-image: none !important;
 }
 
+.select{
+  position: relative;
+  margin-left: 60px;
+  
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: white;
+  background-image: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 10em;
+  height: 3.51em;
+  line-height: 3.5;
+  background: rgb(97, 73, 73);
+  overflow: hidden;
+}
+select::-ms-expand {
+  display: none;
+}
+select {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.9em;
+  color: black;
+  cursor: pointer;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 0 1em;
+  background: #7366FF;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+.select:hover::after {
+  color: white;
+}

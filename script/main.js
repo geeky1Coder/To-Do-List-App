@@ -3,6 +3,7 @@ const del=document.querySelector("#delete_image");
 const task=document.querySelector("#task_input");
 const content=document.querySelector("#main-tasks");
 const checkoX=document.querySelector(".tasks #delete_image");
+const select=document.querySelector(".select #slct");
 //Tasks Array
 
 
@@ -68,6 +69,40 @@ tick.addEventListener("click",function(event){
         insertHtml(s);
     }  
     task.value="";
+});
+
+
+document.querySelector(".select").addEventListener("click", function(){
+    var selectedValue= select.options[select.selectedIndex].value;
+    console.log(selectedValue);
+    if(selectedValue==2){
+        var Y=document.getElementsByClassName("tasks");
+      for(var i=0;i<Y.length;++i){
+        Y[i].style.display="flex";
+      }
+     var x=document.getElementsByClassName("completed");
+     for(var i=0;i<x.length;++i){
+        x[i].style.display="none";
+    }
+   }
+
+   else if(selectedValue==1){
+      var x=document.getElementsByClassName("tasks");
+      for(var i=0;i<x.length;++i){
+        x[i].style.display="flex";
+    }
+   }
+
+   else if(selectedValue==3){
+    var Y=document.getElementsByClassName("tasks");
+    for(var i=0;i<Y.length;++i){
+      Y[i].style.display="flex";
+    }
+    var x=document.querySelectorAll(".tasks:not(.completed)");
+    for(var i=0;i<x.length;++i){
+        x[i].style.display="none";
+    }
+   }
 });
 
     
