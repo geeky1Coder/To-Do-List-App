@@ -14,7 +14,7 @@ body{
   text-align: center;
   margin-top: 15px;
   font-family: 'Kanit', sans-serif;;
-  font-size: 1.6em;
+  font-size: 3em;
   font-weight: bold;
   color: white;
 }
@@ -171,4 +171,35 @@ select {
 }
 .select:hover::after {
   color: white;
+}
+
+@media only screen and (max-width: 699px){
+#header{
+       min-height: 25vh;
+}
+#task_input{
+    font-size: 1.5em;
+    
+}
+
+#add_icon{
+    width: 56.8px;
+    height: 48.8px;
+}
+
+#add_icon img{
+    margin-top: 12px;
+    width: 25px;
+    height: 25px;
+}
+#task_input{
+    position: relative;
+    display: inline-block;
+}
+.select{
+  display: none;
+}
+.tasks{
+  width:350px;
+}
 }
